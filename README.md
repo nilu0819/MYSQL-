@@ -63,6 +63,56 @@ The queries demonstrate skills in **data selection, filtering, aggregation, grou
 - Practical business-style queries for analytics  
 
 ---
+# Campux SQL Examples
+
+This repository contains examples of SQL queries demonstrating different types of **JOINs** and **set operations** using the `campux` schema.
+
+---
+
+## 📂 Contents
+
+### Joins
+- **CROSS JOIN** → Cartesian product (every user with every group)
+- **INNER JOIN** → Only users who have a membership record
+- **RIGHT JOIN** → All users, plus membership info if available
+- **LEFT JOIN** → All memberships, plus user info if available
+- **FULL OUTER JOIN (simulated)** → All memberships and all users, matching where possible
+- **SELF JOIN** → Users table joined to itself (e.g., emergency contacts)
+- **Multi‑Condition JOIN** → Matches students to classes by both `class_id` and `enrollment_year`
+- **Multi‑Table JOIN** → Fetch order details with user info
+- **Incomplete Query (corrected)** → Orders joined with users to get name and city
+
+### Set Operations
+- **UNION** → Combines rows from both tables, removes duplicates
+- **UNION ALL** → Combines rows from both tables, keeps duplicates
+- **INTERSECT** → Returns only rows common to both tables
+- **EXCEPT** → Returns rows in one table that are not in the other
+
+---
+
+## 📝 Notes
+- `FULL OUTER JOIN` is not directly supported in MySQL; it can be simulated using `UNION` of `LEFT JOIN` and `RIGHT JOIN`.
+- Always ensure join conditions (`ON`) reference valid columns.
+- `INTERSECT` and `EXCEPT` may not be supported in all SQL dialects; alternatives include `JOIN` + filtering.
+
+---
+
+## ✅ Quick Reference
+- **INNER JOIN** → Only matched records  
+- **LEFT JOIN** → All from left + matches  
+- **RIGHT JOIN** → All from right + matches  
+- **FULL OUTER JOIN** → All records from both sides  
+- **CROSS JOIN** → All combinations  
+- **SELF JOIN** → Table joins itself  
+- **UNION / UNION ALL** → Combine results  
+- **INTERSECT** → Common rows  
+- **EXCEPT** → Difference between tables  
+
+---
+
+## 🚀 Usage
+Clone the repository and explore each query file to understand how different SQL operations work in practice.
+
 
 ## 📂 How to Use
 1. Clone this repository:
